@@ -1,0 +1,35 @@
+name       : qtox
+version    : 1.1
+release    : 1
+source     :
+    - https://github.com/tux3/qTox/archive/v1.1.tar.gz : 0507b0708295cd5eabe750b3e9e2c92a7970c554262d7714f6cbad26b17b718a
+license    : GPL-3.0
+summary    : qTox is a powerful Tox client.
+description: |
+    qTox is a powerful Tox client.
+builddeps  :
+    - pkgconfig(filteraudio)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(gtk+-2.0)
+    - pkgconfig(libavcodec)
+    - pkgconfig(libqrencode)
+    - pkgconfig(libsodium)
+    - pkgconfig(libtoxcore)
+    - pkgconfig(openal)
+    - pkgconfig(opencv)
+    - pkgconfig(Qt5Core)
+    - pkgconfig(vpx)
+    - pkgconfig(xscrnsaver)
+build      : |
+    install -d build
+    cd build
+    qmake ENABLE_SYSTRAY_UNITY_BACKEND=NO ..
+    %make
+install    : |
+    install -Dm755 build/qtox $installdir/usr/bin/qtox
+    install -Dm644 qTox.desktop $installdir/usr/share/applications/qTox.desktop
+    cd img/icons
+    for _icon in *.png; do
+        _size=$(sed 's|^[^-]*-||;s|\.png||' <<< "$_icon")
+        install -Dm644 "$_icon" "$installdir/usr/share/icons/hicolor/$_size/apps/qtox.png"
+    done
