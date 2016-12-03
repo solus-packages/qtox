@@ -1,6 +1,6 @@
 name       : qtox
 version    : 1.5.2
-release    : 11
+release    : 12
 source     :
     - https://github.com/tux3/qTox/archive/v1.5.2.tar.gz : 0307122993d7999b44f5310bd690cbb9bd4a43646a88edecf56a315a36ce84be
 license    : GPL-3.0
@@ -18,7 +18,8 @@ builddeps  :
     - pkgconfig(libtoxcore)
     - pkgconfig(openal)
     - pkgconfig(opencv)
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt5Help)
+    - pkgconfig(Qt5Svg)
     - pkgconfig(sqlcipher)
     - pkgconfig(vpx)
     - pkgconfig(xscrnsaver)
