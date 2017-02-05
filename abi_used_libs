@@ -27,6 +27,6 @@ libsodium.so.13
 libsqlcipher.so.0
 libstdc++.so.6
 libswscale.so.3
-libtoxav.so.0
-libtoxcore.so.0
-libtoxencryptsave.so.0
+libtoxav.so.1
+libtoxcore.so.1
+libtoxencryptsave.so.1
