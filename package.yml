@@ -1,6 +1,6 @@
 name       : qtox
 version    : 1.9.0
-release    : 15
+release    : 16
 source     :
     - https://github.com/qTox/qTox/archive/v1.9.0.tar.gz : aceaac0c9cf8c9c98e364c8380f992547f369db6f0ac62505531c0474c7e04d6
 license    : GPL-3.0
