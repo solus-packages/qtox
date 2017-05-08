@@ -20,7 +20,7 @@
         <PartOf>network.im</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/usr/share/applications/qTox.desktop</Path>
+            <Path fileType="data">/usr/share/applications/qtox.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/qtox.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/14x14/apps/qtox.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/qtox.png</Path>
@@ -38,9 +38,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2017-04-15</Date>
-            <Version>1.9.0</Version>
+        <Update release="17">
+            <Date>2017-05-08</Date>
+            <Version>1.10.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
             <Email>joshua@stroblindustries.com</Email>
