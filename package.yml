@@ -1,18 +1,19 @@
 name       : qtox
-version    : 1.11.0
-release    : 20
+version    : 1.12.1
+release    : 21
 source     :
-    - https://github.com/qTox/qTox/archive/v1.11.0.tar.gz : be38517cd915727dbd9b3cd2a51bbaf1cae28290de07a34c759ec8b77c502cd4
+    - https://github.com/qTox/qTox/archive/v1.12.1.tar.gz : 65b25b9ced6b163d19d75800cc44394785a3281b2376c1f9f2ecffce96029e37
 license    : GPL-3.0
 component  : network.im
-summary    : qTox is a powerful Tox client.
+summary    : qTox is a powerful Tox client
 description: |
-    qTox is a powerful Tox client.
+    The most feature-rich Tox client; P2P instant messaging, audio and video calls.
 builddeps  :
     - pkgconfig(filteraudio)
     - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(gtk+-2.0)
     - pkgconfig(libavcodec)
+    - pkgconfig(libexif)
     - pkgconfig(libqrencode)
     - pkgconfig(libsodium)
     - pkgconfig(libtoxcore)
@@ -25,15 +26,18 @@ builddeps  :
     - pkgconfig(vpx)
     - pkgconfig(xscrnsaver)
 setup      : |
+    %patch -p1 < $pkgfiles/0001-backout-werror.patch
     sed -i -e 's|AudioVideo;||g' qtox.desktop
     %cmake .
 build      : |
     %make
 install    : |
-    install -Dm755 qtox $installdir/usr/bin/qtox
-    install -Dm644 qtox.desktop $installdir/usr/share/applications/qtox.desktop
+    install -Dm00755 qtox $installdir/usr/bin/qtox
+    install -Dm00644 qtox.desktop $installdir/usr/share/applications/qtox.desktop
     cd img/icons
     rm qtox*
     for size in *x*; do
-        install -Dm644 "$size/qtox.png" "$installdir/usr/share/icons/hicolor/$size/apps/qtox.png"
+        install -Dm00644 "$size/qtox.png" "$installdir/usr/share/icons/hicolor/$size/apps/qtox.png"
     done
+check      : |
+    %make test
