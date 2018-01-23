@@ -1,8 +1,8 @@
 name       : qtox
-version    : 1.12.1
-release    : 21
+version    : 1.13.0
+release    : 22
 source     :
-    - https://github.com/qTox/qTox/archive/v1.12.1.tar.gz : 65b25b9ced6b163d19d75800cc44394785a3281b2376c1f9f2ecffce96029e37
+    - https://github.com/qTox/qTox/archive/v1.13.0.tar.gz : 8a85b47f5a1033e997e16616ddeeb9af277b2f8ee3fe06cf5b9f3c8869a5d737
 license    : GPL-3.0
 component  : network.im
 summary    : qTox is a powerful Tox client
