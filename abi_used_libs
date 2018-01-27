@@ -24,7 +24,7 @@ libm.so.6
 libopenal.so.1
 libpthread.so.0
 libqrencode.so.3
-libsodium.so.13
+libsodium.so.23
 libsqlcipher.so.0
 libstdc++.so.6
 libswscale.so.4
