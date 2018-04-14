@@ -1,9 +1,9 @@
 name       : qtox
-version    : 1.13.0
-release    : 23
+version    : 1.14.1
+release    : 24
 source     :
-    - https://github.com/qTox/qTox/archive/v1.13.0.tar.gz : 8a85b47f5a1033e997e16616ddeeb9af277b2f8ee3fe06cf5b9f3c8869a5d737
-license    : GPL-3.0
+    - https://github.com/qTox/qTox/archive/v1.14.1.tar.gz : baa7b86cf54371e1d0fae4e56d12f15c75b6f43d113057e740ba98772def149d
+license    : GPL-3.0-or-later
 component  : network.im
 summary    : qTox is a powerful Tox client
 description: |
@@ -26,18 +26,10 @@ builddeps  :
     - pkgconfig(vpx)
     - pkgconfig(xscrnsaver)
 setup      : |
-    %patch -p1 < $pkgfiles/0001-backout-werror.patch
-    sed -i -e 's|AudioVideo;||g' qtox.desktop
-    %cmake .
+    %cmake -DGIT_DESCRIBE=v$version .
 build      : |
     %make
 install    : |
-    install -Dm00755 qtox $installdir/usr/bin/qtox
-    install -Dm00644 qtox.desktop $installdir/usr/share/applications/qtox.desktop
-    cd img/icons
-    rm qtox*
-    for size in *x*; do
-        install -Dm00644 "$size/qtox.png" "$installdir/usr/share/icons/hicolor/$size/apps/qtox.png"
-    done
+    %make_install
 check      : |
     %make test

@@ -2,10 +2,10 @@
     <Source>
         <Name>qtox</Name>
         <Packager>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua@stroblindustries.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
-        <License>GPL-3.0</License>
+        <License>GPL-3.0-or-later</License>
         <PartOf>network.im</PartOf>
         <Summary xml:lang="en">qTox is a powerful Tox client</Summary>
         <Description xml:lang="en">The most feature-rich Tox client; P2P instant messaging, audio and video calls.
@@ -35,15 +35,17 @@
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/qtox.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/72x72/apps/qtox.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/qtox.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/qtox.svgz</Path>
+            <Path fileType="data">/usr/share/metainfo/qTox.appdata.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="23">
-            <Date>2018-01-27</Date>
-            <Version>1.13.0</Version>
+        <Update release="24">
+            <Date>2018-04-14</Date>
+            <Version>1.14.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joshua Strobl</Name>
-            <Email>joshua@stroblindustries.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>
