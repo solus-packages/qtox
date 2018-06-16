@@ -23,7 +23,7 @@ libgtk-x11-2.0.so.0
 libm.so.6
 libopenal.so.1
 libpthread.so.0
-libqrencode.so.3
+libqrencode.so.4
 libsodium.so.23
 libsqlcipher.so.0
 libstdc++.so.6

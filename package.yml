@@ -1,6 +1,6 @@
 name       : qtox
 version    : 1.14.1
-release    : 25
+release    : 26
 source     :
     - https://github.com/qTox/qTox/archive/v1.14.1.tar.gz : baa7b86cf54371e1d0fae4e56d12f15c75b6f43d113057e740ba98772def149d
 license    : GPL-3.0-or-later

@@ -19,7 +19,7 @@
 </Description>
         <PartOf>network.im</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin/qtox</Path>
             <Path fileType="data">/usr/share/applications/qtox.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/qtox.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/14x14/apps/qtox.png</Path>
@@ -40,8 +40,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="25">
-            <Date>2018-04-15</Date>
+        <Update release="26">
+            <Date>2018-06-16</Date>
             <Version>1.14.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
