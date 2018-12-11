@@ -6,10 +6,10 @@ libQt5Widgets.so.5
 libQt5Xml.so.5
 libX11.so.6
 libXss.so.1
-libavcodec.so.57
-libavdevice.so.57
-libavformat.so.57
-libavutil.so.55
+libavcodec.so.58
+libavdevice.so.58
+libavformat.so.58
+libavutil.so.56
 libc.so.6
 libcairo.so.2
 libexif.so.12
@@ -27,5 +27,5 @@ libqrencode.so.4
 libsodium.so.23
 libsqlcipher.so.0
 libstdc++.so.6
-libswscale.so.4
+libswscale.so.5
 libtoxcore.so.2

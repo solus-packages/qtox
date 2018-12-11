@@ -1,6 +1,6 @@
 name       : qtox
 version    : 1.16.3
-release    : 28
+release    : 29
 source     :
     - https://github.com/qTox/qTox/archive/v1.16.3.tar.gz : b842e2e7cbfa356da32dd7afc7628d55ce35d046ed72a468b211ab9ef863c382
 license    : GPL-3.0-or-later
@@ -9,6 +9,8 @@ summary    : qTox is a powerful Tox client
 description: |
     The most feature-rich Tox client; P2P instant messaging, audio and video calls.
 builddeps  :
+    - pkgconfig(Qt5Help)
+    - pkgconfig(Qt5Svg)
     - pkgconfig(filteraudio)
     - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(gtk+-2.0)
@@ -20,12 +22,12 @@ builddeps  :
     - pkgconfig(openal)
     - pkgconfig(opencv)
     - pkgconfig(opus)
-    - pkgconfig(Qt5Help)
-    - pkgconfig(Qt5Svg)
     - pkgconfig(sqlcipher)
     - pkgconfig(vpx)
     - pkgconfig(xscrnsaver)
 setup      : |
+    sed -e 's|-Werror||' -i CMakeLists.txt
+
     %cmake -DGIT_DESCRIBE=v$version .
 build      : |
     %make

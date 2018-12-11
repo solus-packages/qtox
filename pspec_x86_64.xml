@@ -40,8 +40,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="28">
-            <Date>2018-07-23</Date>
+        <Update release="29">
+            <Date>2018-12-08</Date>
             <Version>1.16.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Pierre-Yves</Name>
