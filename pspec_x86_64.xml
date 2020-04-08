@@ -2,8 +2,8 @@
     <Source>
         <Name>qtox</Name>
         <Packager>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>F. von Gellhorn</Name>
+            <Email>flinux@vongellhorn.ch</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>network.im</PartOf>
@@ -40,12 +40,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="32">
-            <Date>2019-04-01</Date>
+        <Update release="33">
+            <Date>2020-04-08</Date>
             <Version>1.16.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Bryan T. Meyers</Name>
-            <Email>bmeyers@datadrake.com</Email>
+            <Name>F. von Gellhorn</Name>
+            <Email>flinux@vongellhorn.ch</Email>
         </Update>
     </History>
 </PISI>
